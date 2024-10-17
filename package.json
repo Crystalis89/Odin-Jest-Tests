@@ -1,0 +1,15 @@
+{
+  "name": "odin-jest-tests",
+  "version": "1.0.0",
+  "description": "Assignment for The Odin Project to make Jest Tests and the code they are testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
