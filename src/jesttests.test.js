@@ -5,14 +5,16 @@ const tests = require('./scripts');
 
 // npm run watch
 
-// A capitalize function that takes a string and returns it with the first character capitalized.
+// A capitalize function that takes a string and returns it with the first character capitalized. --complete
 
 
-// test('Capitalize', () => {
+test('Capitalize', () => {
 
-//     expect(tests.capitalize('test')).toBe('Test')
+    expect(tests.capitalize('test')).toBe('Test')
+    expect(tests.capitalize('Test2')).toBe('Test2')
 
-// })
+
+})
 
 
 // // A reverseString function that takes a string and returns it reversed. -- Passed
@@ -45,18 +47,20 @@ const tests = require('./scripts');
 // })
 
 
-//Takes a string and a shift factor then returns each character shifted that many forward, like 3 forward turns H to K and Z becomes C. Remember to retain same capitalization and puncutation.
+//Takes a string and a shift factor then returns each character shifted that many forward, like 3 forward turns H to K and Z becomes C. Remember to retain same capitalization and puncutation. --Complete
 
 
 
-test('caesarCipher', () => {
+// test('caesarCipher', () => {
 
-    expect(tests.caesarCipher('Test', 3)).toBe('Whvw')
-    expect(tests.caesarCipher('zoo', 4)).toBe('dtt')
-    expect(tests.caesarCipher('apple', 10)).toBe('kzzvo')
-    expect(tests.caesarCipher('test test', 6)).toBe('')
+//     expect(tests.caesarCipher('Test', 3)).toBe('Whvw')
+//     expect(tests.caesarCipher('zoo', 4)).toBe('dss')
+//     expect(tests.caesarCipher('apple', 10)).toBe('kzzvo')
+//     expect(tests.caesarCipher('test test', 6)).toBe('zkyz zkyz')
+//     expect(tests.caesarCipher('Apple Test', 5)).toBe('Fuuqj Yjxy')
 
-})
+
+// })
 
 
 

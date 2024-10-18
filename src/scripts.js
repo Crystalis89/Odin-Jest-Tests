@@ -1,8 +1,19 @@
-//Capitalize the first character of the input string.
+//Capitalize the first character of the input string. -- complete
 function capitalize(string) {
-    let newstring = string
+    let splitString = string.split("")
+    let rejoined
 
-    return newstring
+        for (const letter of splitString) {
+            if (letter === splitString[0] && rejoined === undefined) {
+                rejoined = splitString[0].toUpperCase()
+            } else {
+                rejoined = `${rejoined}${letter}`
+            }
+
+        }
+
+
+    return rejoined
 }
 
 //Reverses an input string. -- Complete
@@ -60,12 +71,55 @@ function calculator(numone, numtwo, operator) {
     return answer
 }
 
-//Takes a string and a shift factor then returns each character shifted that many forward, like 3 forward turns H to K and Z becomes C. Remember to retain same capitalization and puncutation.
-function caesarCipher(string) {
+//Takes a string and a shift factor then returns each character shifted that many forward, like 3 forward turns H to K and Z becomes C. Remember to retain same capitalization and puncutation.  --Complete
+function caesarCipher(string, offset) {
 
 const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-let splitString = string.split("")
+const splitString = string.split("")
+let cipheredWord
+let index 
+console.log(splitString)
+console.log(offset)
 
+
+
+// Get index of character in the alphabet and add the offset to it, check if character is capitalized, finally add the new letter to cipheredWord, capitalized if needed.
+
+ for (const letter of splitString) {
+console.log(letter)
+    if (letter === ' ') {
+        console.log('Space')
+
+        cipheredWord = `${cipheredWord}${' '}`       
+         continue
+    }
+
+    index = alphabet.indexOf(letter.toLowerCase())
+
+    if (index + offset > 25) {
+        newletter =  alphabet[index + offset - 26]
+    } else {
+        newletter = alphabet[index + offset]
+    }
+
+
+    if (cipheredWord === undefined) {
+
+        if (letter === letter.toUpperCase()) {
+            cipheredWord = newletter.toUpperCase()
+  
+        } else {cipheredWord = newletter}
+
+        continue
+    }
+
+    if (letter === letter.toUpperCase()) {
+        cipheredWord = `${cipheredWord}${newletter.toUpperCase()}`
+    } else { cipheredWord = `${cipheredWord}${newletter}`}
+
+console.log(cipheredWord)
+ }
+return cipheredWord
     
 }
 
