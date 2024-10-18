@@ -20,7 +20,6 @@ function capitalize(string) {
 function reverseString(string) {
     let splitString = string.split("")
     let reversed
-    console.log(splitString)
 
 
     for (const letter of splitString.reverse()) {
@@ -78,17 +77,13 @@ const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p
 const splitString = string.split("")
 let cipheredWord
 let index 
-console.log(splitString)
-console.log(offset)
 
 
 
 // Get index of character in the alphabet and add the offset to it, check if character is capitalized, finally add the new letter to cipheredWord, capitalized if needed.
 
  for (const letter of splitString) {
-console.log(letter)
     if (letter === ' ') {
-        console.log('Space')
 
         cipheredWord = `${cipheredWord}${' '}`       
          continue
@@ -117,16 +112,50 @@ console.log(letter)
         cipheredWord = `${cipheredWord}${newletter.toUpperCase()}`
     } else { cipheredWord = `${cipheredWord}${newletter}`}
 
-console.log(cipheredWord)
  }
 return cipheredWord
     
 }
 
 
-//Take array of numbers for input. Output an object with their average, min, max, and array length.
-function analyzeArray(params) {
-    
+//Take array of numbers for input. Output an object with their average, min, max, and array length. --Complete
+function analyzeArray(array) {
+    let analysis = {
+        'average': null,
+        'min': null,
+        'max': null,
+        'length': array.length
+    }
+    let average
+    let min = array[0]
+    let max = array[0]
+
+    for (const number of array) {
+        if (average === undefined) {
+            average = number
+            continue
+        }
+
+        average += number
+
+        if (number < min) {
+            min = number
+        }
+
+        if (number > max) {
+            max = number
+        }
+
+
+    }
+
+    analysis.average = Math.round(average / analysis.length)
+    analysis.min = min
+    analysis.max = max
+
+    return analysis
+
+
 }
 
   module.exports = {}
