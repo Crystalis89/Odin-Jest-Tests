@@ -4,7 +4,8 @@
   "description": "Assignment for The Odin Project to make Jest Tests and the code they are testing.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watch *.js"
   },
   "keywords": [],
   "author": "",

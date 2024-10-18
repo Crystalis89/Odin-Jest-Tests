@@ -5,12 +5,28 @@ function capitalize(string) {
     return newstring
 }
 
-//Reverses an input string.
+//Reverses an input string. -- Complete
 function reverseString(string) {
-    
+    let splitString = string.split("")
+    let reversed
+    console.log(splitString)
+
+
+    for (const letter of splitString.reverse()) {
+
+        if (reversed === undefined) {
+            reversed = letter
+            continue
+        }
+        reversed =`${reversed}${letter}`
+        console.log(reversed)
+
+    }
+    return reversed
+
 }
 
-//Takes number to add, subtract, divide, and multiply. Only needs to take two numbers for input.
+//Takes number to add, subtract, divide, and multiply. Only needs to take two numbers for input. --Complete
 function calculator(numone, numtwo, operator) {
   let answer
 
@@ -45,7 +61,11 @@ function calculator(numone, numtwo, operator) {
 }
 
 //Takes a string and a shift factor then returns each character shifted that many forward, like 3 forward turns H to K and Z becomes C. Remember to retain same capitalization and puncutation.
-function caesarCipher(params) {
+function caesarCipher(string) {
+
+const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+let splitString = string.split("")
+
     
 }
 
